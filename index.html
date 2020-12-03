@@ -24,20 +24,10 @@
         
         <main>
             <article>
-                <div><img id="bg1" class="scroll" data-rate="-2" data-direction="vertical" src="img/hamburga.jfif" alt="Simpel hamburgare"></div>
-            </article>              
+                <div class="scroll"><img id="bg1"  src="img/hamburga.jfif" alt="Simpel hamburgare"></div>
+            </article> 
+                <div></div>             
         </main>
-
-        <section id="part-green">
-            <article>1</article>
-            <article>2</article>
-            <article>3</article>
-            <article>4</article>
-            <article>5</article>
-            <article>6</article>
-        </section>
-
-        
 
         <script>
 
@@ -45,17 +35,11 @@
 
                 const target = document.querySelector('.scroll')
                 
-                var index = 0, length = target.length
-                for (index; index < length; index++) {
-                    var pos = window.pageYOffset * target[index].dataset.rate;
+                var scrollar = window.pageYOffset;
+                var rate = scrollar * -1.9;
 
-                    target[index].style.transform = 'translate3d(0px,'+pos+'px,0px)'
+                target.style.transform = 'translate3d(0px,'+rate+'px,0px)';
 
-
-
-                }
-
-                
             });
         </script>
         

@@ -2,13 +2,13 @@
 body{
     margin:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;    
+    background-color: orange;    
 }
-
+    
 #container{
     display:grid;
     height:300vh;
-    grid-template-rows: 10vh 5vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh;
+    grid-template-rows: 10vh 5vh 50vh;
 }
 
 nav{
@@ -25,25 +25,45 @@ header{
 #mainlogo{
     margin-left:20px;
     max-width:120px;
-
+}
+#bg2{
+    width:100vw;
+    z-index: 2px;
 }
 #bg1{
+
+    margin:-10px;
     width:100vw;
+    position: absolute;
+    z-index: 20px;
 
 }
+#bg3{
+
+    margin-top:-160px;
+    margin-left:80px;
+    width:30vw;
+    position: absolute;
+    z-index: 50;
+}
+
 article{
     padding: 0;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-items: middle;
     place-items: center;
-    position: relative;
+    position: absolute;
     z-index: -10;
 }
 
 section#part-green article {
     width:25%;
-    margin:5px;
+    margin-top:800px;
+    margin-left:200px;
     height:100px;
     background-color:rgb(255, 174, 0);
+    position: absolute;
+    z-index: -2;
   }
+

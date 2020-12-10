@@ -27,17 +27,19 @@ header{
     max-width:120px;
 }
 #bg2{
+    margin:-17px;
     width:100vw;
-    z-index: 2px;
+    z-index:2px;
 }
 #bg1{
 
-    margin:-10px;
+    margin:-17px;
     width:100vw;
     position: absolute;
     z-index: 20px;
 
 }
+
 #bg3{
 
     margin-top:-160px;
@@ -46,8 +48,7 @@ header{
     position: absolute;
     z-index: 50;
 }
-
-article{
+article#bg{
     padding: 0;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
@@ -57,13 +58,30 @@ article{
     z-index: -10;
 }
 
-section#part-green article {
-    width:25%;
-    margin-top:800px;
-    margin-left:200px;
-    height:100px;
-    background-color:rgb(255, 174, 0);
-    position: absolute;
-    z-index: -2;
-  }
+#break{
+    margin-top:100px;    
+}
 
+section#part-green article { 
+    display:flex;
+    flex-direction: column;
+}
+.r1{
+    width:200px;
+    height:50px;
+    padding: 10px;
+    margin-top:50px;
+    margin-left:100px;
+    background-color:rgb(255, 174, 0);
+    position: relative;
+    z-index: -40;
+
+}
+.r2{
+    width:350px;
+    height:300px; 
+    position: relative;
+    z-index: -50;
+    justify-self: right;
+    
+}

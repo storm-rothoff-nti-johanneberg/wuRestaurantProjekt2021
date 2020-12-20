@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+
+        </header>
+
+        <nav>
+            <div><img id="mainlogo" src="img/logotyp2.png" alt="Simpel loga"></div>
+            <a href=about-us.html>Om oss</a>
+            <a>⬤</a>
+            <a href=index.html>Hem</a>
+            <a>⬤</a>
+            <a href=reservations.html>Reservationer</a>
+        </nav>
+
+
+        <article id=bg>
+            <div><img  alt="Bakgrundsbild" id="bg2" src="img/reservationbg.png"></div>
+        </article>
+
+
+        <section  class="reservation" >
+            <h1>Reservationer</h1>
+            <a>Reservationer är tyvärr avstängda.</a>
+
+        </section>
+        <div id=break></div>
+        
+
+        <footer class="scroll" data-rate="-0.5" data-direction="vertical">
+            <a>Göteborg • In-House Dining</a>
+            <a>(079) 201-3030 • Gibraltargatan 1C • 411 32 Göteborg</a>
+                
+            <a>Göteborg • In-House Dining</a>
+            <a>(079) 394-6350 • Engelbrektsgatan 59 • 412 52 Göteborg</a>
+                
+            <a>Malmö• Take-out & Delivery</a>
+            <a>(079) 953-8143 • Claesgatan 7 våning 2 • 214 26 Malmö</a>
+                
+            <a href="https://www.nicepng.com/png/detail/244-2445739_broiler-chicken-png.png" target="_blank">Terms of Use </a>
+        </footer>
+        
+    </div>
+    <script>
+        window.addEventListener('scroll', function(e) {
+        
+        const target = document.querySelectorAll('.scroll');
+        
+        
+        var index = 0, length = target.length;
+        for (index; index < length; index++) {
+            var pos = window.pageYOffset * target[index].dataset.rate;
+        
+            if(target[index].dataset.direction === 'vertical') {
+                    target[index].style.transform = 'translate3d(0px,'+pos+'px, 0px)';
+            } else {
+                var posX = window.pageYOffset * target[index].dataset.ratex;
+                var posY = window.pageYOffset * target[index].dataset.ratey;        
+                target[index].style.transform = 'translate3d('+posX+'px, '+posY+'px, 0px)';
+            }
+        }
+        });
+        </script>
+</body>
+</html>
